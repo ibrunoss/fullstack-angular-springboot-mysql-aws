@@ -2,6 +2,8 @@
 
 Repositório criado para armazenar os projetos <a href="https://www.udemy.com/course/desenvolvimento-full-stack-angular-springboot-mysql-aws/">Desenvolvimento Full Stack: Angular, SpringBoot, MySQL, AWS</a>.
 
+<hr />
+
 ## O curso está divido em 3 módulos
 
 <ol>
