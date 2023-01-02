@@ -1,0 +1,14 @@
+.app-footer-container {
+  justify-content: end;
+  font-size: 1rem;
+}
+
+.app-footer-container a {
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+}
+
+.app-footer-container a:hover {
+  text-decoration: underline;
+}
