@@ -1,4 +1,32 @@
-<app-header></app-header>
-app-component
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<div class="main-container">
+  <app-header [sidenav]="sidenav"></app-header>
+  <mat-sidenav-container>
+    <mat-sidenav
+      #sidenav
+      mode="side"
+      [(opened)]="opened"
+      (opened)="events.push('open!')"
+      (closed)="events.push('close!')"
+    >
+      <mat-list (click)="sidenav.toggle()">
+        <mat-list-item>
+          <a href="/"><mat-icon>home</mat-icon> Home</a>
+        </mat-list-item>
+      </mat-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p>
+      <p>
+        <button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button>
+      </p>
+      <p>Events:</p>
+      <div class="example-events">
+        <div *ngFor="let e of events">{{ e }}</div>
+      </div>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  <app-footer></app-footer>
+</div>
