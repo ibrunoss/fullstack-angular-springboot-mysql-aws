@@ -2,6 +2,7 @@
   <app-header [sidenav]="sidenav"></app-header>
   <mat-sidenav-container>
     <mat-sidenav
+      class="sidenav"
       #sidenav
       mode="side"
       [(opened)]="opened"
@@ -10,7 +11,7 @@
     >
       <mat-list (click)="sidenav.toggle()">
         <mat-list-item>
-          <a href="/"><mat-icon>home</mat-icon> Home</a>
+          <a href="/"><mat-icon>home</mat-icon>Home</a>
         </mat-list-item>
       </mat-list>
     </mat-sidenav>

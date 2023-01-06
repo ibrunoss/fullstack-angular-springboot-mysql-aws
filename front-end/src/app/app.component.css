@@ -9,9 +9,13 @@
 }
 
 a {
-  color: #111111;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 1rem;
+  color: #f1f1f1;
   text-decoration: none;
 }
 a:hover {
-  font-size: 18px;
+  transform: scale(1.1);
 }
