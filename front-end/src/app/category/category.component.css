@@ -1,0 +1,10 @@
+#table-category .table-category-actions-td button:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.category-container .mat-mdc-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1rem;
+}
