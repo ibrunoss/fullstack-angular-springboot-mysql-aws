@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CategoryComponent } from './category/category.component';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CategoryComponent } from './category/category.component';
     HomeComponent,
     PageNotFoundComponent,
     CategoryComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,

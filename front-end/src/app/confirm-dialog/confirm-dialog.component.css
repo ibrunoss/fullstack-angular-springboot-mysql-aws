@@ -1,0 +1,25 @@
+.confirm-dialog-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  color: #fff;
+}
+
+.confirm-dialog-container .confirm-dialog-actions {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  gap: 0.5rem;
+}
+.confirm-dialog-container .confirm-dialog-actions button {
+  flex: 1;
+}
+
+.confirm-dialog-container .confirm-dialog-content {
+  padding: 0;
+}
+
+.confirm-dialog-container .confirm-dialog-header {
+  padding: 0;
+}
