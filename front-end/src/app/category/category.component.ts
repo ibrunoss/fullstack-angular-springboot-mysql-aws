@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Category } from '../models/Category';
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 
 const CATEGORY_DATA: Category[] = [
   { guid: '8bc6367a-d39a-493a-a6d8-695b3500c335', name: 'Conta' },
@@ -18,6 +20,8 @@ export class CategoryComponent {
   public displayedColumns: string[] = ['position', 'name', 'actions'];
   public categories: Category[] = CATEGORY_DATA;
 
+  constructor(readonly dialog: MatDialog) {}
+
   public createNewCategory(): void {
     console.log('Add category');
   }
@@ -27,6 +31,18 @@ export class CategoryComponent {
   }
 
   public deleteCategory(category: Category): void {
-    console.log(category);
+    this.dialog
+      .open(ConfirmDialogComponent, {
+        data: {
+          title: 'Excluir categoria',
+          message: `Deseja realmente excluir a categoria ${category.name}?`,
+        },
+      })
+      .afterClosed()
+      .subscribe((confirmed) => {
+        if (confirmed) {
+          console.log(`Categoria ${category.name} deletada`);
+        }
+      });
   }
 }
